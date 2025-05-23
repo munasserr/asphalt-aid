@@ -62,7 +62,7 @@ Before running this project, make sure you have the following installed:
 
 1. **Clone the Repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/munasserr/asphalt-aid
    cd asphalt-aid
    ```
 
@@ -168,12 +168,7 @@ To use the complete Asphalt Aid system, you'll need to run the frontend applicat
 
 **Frontend Repository**: [https://github.com/munasserr/asphalt-aid-frontend](https://github.com/munasserr/asphalt-aid-frontend)
 
-Please refer to the frontend repository's README file for detailed instructions on how to set up and run the frontend application. The frontend provides:
-
-- User-friendly interface for reporting road issues
-- Dashboard for viewing and managing reports
-- Integration with the backend API
-- Responsive design for mobile and desktop use
+Please refer to the frontend repository's README file for detailed instructions on how to set up and run the frontend application.
 
 ## 📚 API Documentation
 
@@ -218,27 +213,6 @@ asphalt-aid/
 3. Update URL configurations
 4. Run migrations: `docker compose exec django-web python manage.py makemigrations && docker compose exec django-web python manage.py migrate`
 
-### **Database Management**
-```bash
-# Access Django shell
-docker compose exec django-web python manage.py shell
-
-# View database
-docker compose exec django-web python manage.py dbshell
-
-# Reset database (⚠️ This will delete all data)
-docker compose down -v
-docker compose up --build
-```
-
-## 🚦 Environment Variables
-
-The project uses environment variables for configuration. Key variables include:
-
-- `DEBUG`: Set to `False` for production
-- `SECRET_KEY`: Django secret key (change for production)
-- `ALLOWED_HOSTS`: Comma-separated list of allowed hosts
-- `DATABASE_URL`: Database connection string (if using external DB)
 
 ## 🆘 Troubleshooting
 
@@ -277,11 +251,10 @@ docker system prune -a
 
 If you encounter any issues:
 
-1. Check the [Issues](../../issues) section
-2. Review the API documentation at `/swagger/`
-3. Ensure Docker is running properly
-4. Verify all services are up: `docker compose ps`
-5. **Most importantly**: Ensure the AI model files are downloaded and placed correctly
+1. Review the API documentation at `/swagger/`
+2. Ensure Docker is running properly
+3. Verify all services are up: `docker compose ps`
+4. **Most importantly**: Ensure the AI model files are downloaded and placed correctly
 
 ## 🎯 Future Enhancements
 
